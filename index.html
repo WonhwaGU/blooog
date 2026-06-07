@@ -1,33 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wonhwa's Model Archive</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WonHwa Archive</title>
+
   <style>
-    body {
-      font-family: Arial;
-      max-width: 700px;
-      margin: 40px auto;
-      line-height: 1.6;
+    :root {
+      --bg: #f6f4ef;
+      --paper: #fbfaf7;
+      --text: #1f1f1f;
+      --subtext: #666;
+      --line: #d8d3c8;
+      --accent: #7b6f5c;
+      --max-width: 760px;
     }
-    img {
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .site-wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 56px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      color: var(--subtext);
+    }
+
+    .hero {
+      margin-bottom: 72px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.15;
+      font-weight: normal;
+      margin: 0 0 18px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: var(--subtext);
+      font-size: 1.02rem;
+      margin: 0;
+    }
+
+    .section {
+      margin-bottom: 72px;
+    }
+
+    .section-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--subtext);
+      margin-bottom: 18px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 26px 24px;
+      margin-bottom: 22px;
+    }
+
+    .post-meta {
+      font-size: 0.9rem;
+      color: var(--subtext);
+      margin-bottom: 10px;
+    }
+
+    .post-title {
+      font-size: 1.5rem;
+      margin: 0 0 14px;
+      font-weight: normal;
+    }
+
+    .post-image {
       width: 100%;
-      border-radius: 10px;
+      display: block;
+      margin: 18px 0 18px;
+      border: 1px solid var(--line);
+    }
+
+    .post-text {
+      margin: 0;
+      color: #2b2b2b;
+    }
+
+    .about-box {
+      background: transparent;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      color: var(--subtext);
+    }
+
+    .footer {
+      margin-top: 80px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--subtext);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 640px) {
+      .site-wrap {
+        padding: 28px 18px 56px;
+      }
+
+      .hero {
+        margin-bottom: 48px;
+      }
+
+      .section {
+        margin-bottom: 48px;
+      }
+
+      .card {
+        padding: 20px 18px;
+      }
+
+      .post-title {
+        font-size: 1.3rem;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="site-wrap">
 
-  <h1>My Model Car Archive</h1>
-  <p>2013 - Present</p>
+    <header class="topbar">
+      <div class="brand">WonHwa Archive</div>
+      <nav class="nav">
+        <a href="#archive">Archive</a>
+        <a href="#about">About</a>
+        <a href="#notes">Notes</a>
+      </nav>
+    </header>
 
-  <h2>Ferrari 458 Italia</h2>
-  <img src="https://via.placeholder.com/600">
+    <section class="hero">
+      <h1>A quiet place for models, memories, and personal work.</h1>
+      <p>
+        This site began as a small archive for model-car photos and old blog memories.
+        Over time, it may also become a portfolio — but for now, it is simply a place
+        to keep things I do not want to lose.
+      </p>
+    </section>
 
-  <p>
-    This was one of my favorite pieces back in 2013.
-    I still remember how it felt unboxing it.
-  </p>
+    <section id="archive" class="section">
+      <div class="section-title">Archive</div>
 
+      <article class="card">
+        <div class="post-meta">Model Archive · 2013 / Revisited in 2026</div>
+        <h2 class="post-title">Ferrari 458 Italia</h2>
+
+        <img
+          class="post-image"
+          src="https://via.placeholder.com/1200x700?text=Your+Photo+Here"
+          alt="Model car photo"
+        />
+
+        <p class="post-text">
+          This was one of the pieces I still remember very clearly from back then.
+          The point of rebuilding this archive is not only to keep the image,
+          but also to keep the feeling around it — the time, the room, the excitement,
+          and the version of myself that first opened the box.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="post-meta">Model Archive · Personal Note</div>
+        <h2 class="post-title">Why I wanted to build my own site</h2>
+        <p class="post-text">
+          I started thinking about this after revisiting an old Blogger page from 2013.
+          It made me realize that if a platform disappears one day, some parts of my memory
+          might disappear with it too. So this site is a small step toward keeping those things
+          in a space that feels more like mine.
+        </p>
+      </article>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-title">About</div>
+      <div class="about-box">
+        <p>
+          Hi, I’m WonHwa. This is a personal archive for model cars, old photos,
+          reflections, and eventually selected creative work.
+        </p>
+      </div>
+    </section>
+
+    <section id="notes" class="section">
+      <div class="section-title">Notes</div>
+      <div class="about-box">
+        <p>
+          Future sections may include design notes, portfolio projects, or writing.
+          But for now, this space stays intentionally simple.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © 2026 WonHwa Archive
+    </footer>
+
+  </div>
 </body>
 </html>
